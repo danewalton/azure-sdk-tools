@@ -82,7 +82,7 @@ jobs:
     - task: AzureCLI@2
       displayName: Build and Deploy Stress Tests
       inputs:
-        azureSubscription: $(DeploySubscription)
+        azureSubscription: $[variables.DeploySubscription]
         scriptType: pscore
         scriptPath: $(System.DefaultWorkingDirectory)/$(Repository)/eng/common/scripts/stress-testing/deploy-stress-tests.ps1
         arguments:
